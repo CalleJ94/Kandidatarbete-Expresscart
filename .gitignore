@@ -1,0 +1,12 @@
+node_modules/
+data/
+/config/*-local.json
+.vscode
+**.DS_Store
+
+conf/
+admin.conf
+developer.conf
+developer.crt
+developer.key
+calle/

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: expresscart-app-deployment-v1
+  labels:
+    name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: web
+  template:
+    metadata:
+      labels:
+        name: web
+        version: v1
+    spec:
+      containers:
+      - image: my-image
+        imagePullPolicy: Never
+        name: web
+        ports:
+        - containerPort: 1111
